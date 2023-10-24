@@ -1,0 +1,41 @@
+### Read all pizzas with File variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+
+
+### create new movie 
+
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Star Wars: The Phantom Menace (Episode I)",
+    "duration": 136,
+    "budget": 115,
+    "link":"https://en.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_The_Phantom_Menace"
+}
+
+### Try to create a film without a token
+POST {{baseUrl}}/films/
+Content-Type: application/json
+
+{
+    "title":"Star Wars: The Phantom Menace (Episode I)",
+    "duration": 136,
+    "budget": 115,
+    "link":"https://en.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_The_Phantom_Menace"
+}
+
+
+### Read film with ID == 1
+
+GET {{baseUrl}}/films/1
+
+
+### Delete the film with ID == 1
+DELETE {{baseUrl}}/films/1
+
+
+### Delete the film with ID == 2
+DELETE {{baseUrl}}/films/1
