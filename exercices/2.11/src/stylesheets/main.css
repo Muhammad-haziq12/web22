@@ -1,0 +1,6 @@
+.responsive-background-color {
+    background-color: lightblue;
+    @media (min-width: 992px) {
+      background-color: white;
+    }
+  }
